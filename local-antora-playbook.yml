@@ -1,0 +1,27 @@
+runtime:
+  cache_dir: ./.cache/antora
+site:
+  title: Diabetes Wiki
+  start_page: diabetes:ROOT:index.adoc
+  robots: allow
+git:
+  ensure_git_suffix: false
+content:
+  sources:
+    - url: ./workspace/diabetes-wiki/
+      start_path: wiki
+      branches: HEAD
+asciidoc:
+  attributes:
+    url-project: https://reddit.com/r/diabetes
+    url-org: https://github.com/reddit-diabetes
+ui:
+  bundle:
+    url: https://github.com/reddit-diabetes/diabetes-antora-ui/releases/latest/download/ui-bundle.zip
+  supplemental_files:
+  - path: ui.yml
+    contents: |
+      static_files: [ .nojekyll ]
+  - path: .nojekyll
+output:
+  dir: ./docs

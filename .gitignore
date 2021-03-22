@@ -1,5 +1,9 @@
 # Antora
 .cache/
+docs/
 
 # Node
 node_modules/
+
+# IntelliJ
+.idea/
